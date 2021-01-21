@@ -7,6 +7,8 @@ library(jsonlite)
 library(tidyverse)
 library(wesanderson)
 library(ggplot2)
+library(RColorBrewer)
+library(rsconnect)
 
 
 
@@ -57,13 +59,14 @@ shinyServer(function(input, output) {
     titles = sapply(seq(n), function(i) strsplit(titles[i], " ")[[1]][1])
     
     titles = titles[grepl(".", titles, fixed = TRUE)]
-    
+    nb.cols <- 10
+    mycolors <- colorRampPalette(brewer.pal(8, "Set2"))(nb.cols)
     data = table(titles)
     df = data.frame("Names" = names(data), value = data)
     pie <- ggplot(df, aes(x="", y=value.Freq, fill=Names))+
       geom_bar(width = 1, stat = "identity") +
       coord_polar("y", start=0) +
-      scale_fill_brewer(palette="Set2") +
+      scale_fill_manual(values = mycolors) +
       theme_minimal() +
       xlab("") +
       ylab("")

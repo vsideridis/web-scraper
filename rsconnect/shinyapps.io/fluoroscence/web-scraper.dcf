@@ -1,0 +1,10 @@
+name: web-scraper
+title:
+username:
+account: fluoroscence
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3497172
+bundleId: 4123195
+url: https://fluoroscence.shinyapps.io/web-scraper/
+when: 1611177380.13204
