@@ -1,0 +1,12 @@
+name: jobInfoFromStackOverflow
+title: jobInfoFromStackOverflow
+username:
+account: fluoroscence
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3501815
+bundleId: 4126408
+url: https://fluoroscence.shinyapps.io/jobInfoFromStackOverflow/
+when: 1611249553.68803
+asMultiple: FALSE
+asStatic: FALSE
